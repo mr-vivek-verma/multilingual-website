@@ -1,0 +1,32 @@
+.box {
+    display: flex;
+    width: 80%;
+    height: 90vh;
+    margin-left: 150px;
+    background-color: rgb(166, 162, 162);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+  /* button{
+   margin: 0px 90px;
+  } */
+  h2{
+    margin-left: 90px;
+  }
+  .dashboard__btn{
+    margin-left: 90px;
+  }
+  .home_btn{
+    margin-left: 75px;
+  }
+  .submit_btn{
+    margin-left: 95px;
+  }
+  .location_btn{
+    margin-left: 90px;
+  }
+  .location_form{
+    margin-left: -200px;
+  }

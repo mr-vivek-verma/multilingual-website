@@ -1,0 +1,51 @@
+.container{
+    height: 15rem;
+    background-color: rgb(141, 182, 247);
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-left: -1.6rem;
+    border-radius: 0.5rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    padding-right: 2.5rem;
+
+}
+.location {
+   margin-top: 20px;
+}
+.dashboard {
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .home_box1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+  .home_box2{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .dashboard__btn {
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(60, 3, 3);
+    cursor: pointer;
+  }
+  
+  .location_form{
+    height: 90px;
+  }

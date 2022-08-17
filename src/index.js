@@ -1,17 +1,34 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Suspense } from 'react';
+import './i18n'
+// import i18n (needs to be bundled ;)
+// import "./i18nextConf";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+window.onload = function (e) {
+  getlocation(e);
+ }
+  const getlocation = async (e) => {
+    e.preventDefault();
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (getCurrentPosition) {
+        const coords = [{
+          "lati": getCurrentPosition.coords.latitude,
+          "longi": getCurrentPosition.coords.longitude
+        }]
+        localStorage.setItem("Cords", JSON.stringify(coords))
+      });
+    } else {
+      alert("error occured while fetching your location")
+    }
+  }
+const root = createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
+  <Suspense fallback="...is loading">
+   <App />
+    </Suspense>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
